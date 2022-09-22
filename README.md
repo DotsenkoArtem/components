@@ -1,2 +1,2 @@
-# react-dots
-Project for learning React
+# Components
+Components for web projects
