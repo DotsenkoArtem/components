@@ -1,0 +1,119 @@
+/* Default styles */
+html {
+  font-size: 10px;
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+body {
+	width: 100%;
+  min-height: 100vh;
+  font-family: "Verdana";
+  background-color: rgba(0, 0, 0, 0.1);
+	display: flex;
+	flex-direction: column;
+}
+h1 {
+  margin: 5rem auto;
+  font-family: "Arial";
+  font-size: 3.5rem;
+  color: #2a2a2a;
+  text-align: center;
+  text-transform: uppercase;
+}
+.page-content{
+	display: flex;
+	border-top: solid 1px #2a2a2a;
+	height: 100%;
+}
+
+.sidebar{
+	padding: 1rem;
+	width: 450px;
+	flex: none;
+	border-right: solid 1px #2a2a2a
+}
+
+.sidebar-list{
+	padding-left: 2rem;
+	font-size: 1.6rem;
+	list-style: none;
+}
+.sidebar-list li{
+	margin-bottom: 1.5rem;
+}
+
+.container {
+  margin: 5rem auto 0;
+  display: flex;
+	align-items: flex-start;
+  border-radius: 0.5rem;
+}
+
+.list {
+  margin: 0 auto;
+  max-width: 50rem;
+  font-size: 2rem;
+  border: 1px solid #000;
+  border-radius: 0.5rem;
+  list-style: none;
+  box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+	user-select: none;
+}
+
+.list li:not(:last-child) {
+  border-bottom: 1px solid #000;
+}
+/* End of Default styles */
+
+/* Accordion */
+.accordion-btn {
+  padding: 0 0.5em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #efefef;
+  cursor: pointer;
+}
+.accordion-btn:after {
+  margin-right: 1em;
+  display: inline-block;
+  width: 0.5em;
+  height: 0.5em;
+  content: "";
+  border-right: solid 2px #000;
+  border-bottom: solid 2px #000;
+  transform: rotate(-45deg);
+  transition: 0.3s ease;
+}
+.accordion-btn.open {
+  background: #dedede;
+}
+.accordion-btn.open:after {
+  transform: rotate(45deg);
+}
+
+.accordion-btn:hover {
+  background: #dedede;
+}
+
+.accordion-content {
+  padding: 0 0.5em;
+  max-height: 0;
+  text-align: justify;
+  background: #fff;
+  box-shadow: inset 0 1px 0px 0px rgba(0, 0, 0, 1);
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+.accordion-content p {
+  margin: 0.5em 0;
+}
+
+/* End of Accordion */

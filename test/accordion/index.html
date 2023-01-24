@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>COLLAPSE</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<h1>ACCORDION</h1>
+		<div class="page-content">
+			<aside class="sidebar sidebar_left">
+				<ul class="sidebar-list">
+					<li>- для кнопок задать определенный класс (.accordion-btn)</li>
+					<li>- для вкладок задать определенный класс (.accordion-content)</li>
+					<li>- значения атрибута data-target кнопки должно соответствовать значению id вкладки</li>
+
+					<li>- поиск вкладок осуществляется по id через атрибут кнопки data-target</li>
+					<li>- таким образом, вкладка может быть расположена в любом месте независимо от кнопки, то есть мы не должны соблюдать строгую структуру html-разметки</li>
+					<li>- при открытии вкладки акрываются все остальные закрытые вкладки</li>
+				</ul>
+			</aside>
+
+
+			<div class="container">
+				<ul class="list">
+					<li>
+						<div class="accordion-btn" data-target="accordionContent1">
+							<p>PUSH ME</p>
+						</div>
+						<div id="accordionContent1" class="accordion-content">
+							<p>Раз, два, три, четыре.<br>
+								 Муха плавала в кефире.<br>
+								 Я согласен, что бокал -<br>
+								 Не Ока, и не Байкал,</p>
+						</div>
+					</li>
+					<li>
+						<div class="accordion-btn"  data-target="accordionContent2">
+							<p>TOUCH ME</p>
+						</div>
+						<div id="accordionContent2" class="accordion-content">
+							<p>Но и муха не карась -<br>
+								 Еле выкорабкалась<br>
+								 "Извините", - говорит:<br>
+								 "Если очень кислый вид."</p>
+						</div>
+					</li>
+					<li>
+						<div class="accordion-btn" data-target="accordionContent3">
+							<p>CLICK ME</p>
+						</div>
+						<div id="accordionContent3" class="accordion-content">
+							<p>Кузов длиной 3600мм с высотой бортов в 400 мм позволяет перевозить баллоны только в один ряд в количестве 12 штук. Данное количество баллонов значительно ниже среднего количества, перевозимого в настоящее время на автомобилях ЗИЛ в 2 ряда с высотой борта 800 мм за одну поездку.</p>
+						</div>
+					</li>
+					<li>
+						<div class="accordion-btn" data-target="accordionContent4">
+							<p>DO SOMETHING</p>
+						</div>
+						<div id="accordionContent4" class="accordion-content">
+							<p>Кузов длиной 3600мм с высотой бортов в 400 мм позволяет перевозить баллоны только в один ряд в количестве 12 штук. Данное количество баллонов значительно ниже среднего количества, перевозимого в настоящее время на автомобилях ЗИЛ в 2 ряда с высотой борта 800 мм за одну поездку.</p>
+						</div>
+					</li>
+					<li>
+						<div class="accordion-btn" data-target="accordionContent5">
+							<p>LET`S KICK ME</p>
+						</div>
+						<div id="accordionContent5" class="accordion-content">
+							<p>Кузов длиной 3600мм с высотой бортов в 400 мм позволяет перевозить баллоны только в один ряд в количестве 12 штук. Данное количество баллонов значительно ниже среднего количества, перевозимого в настоящее время на автомобилях ЗИЛ в 2 ряда с высотой борта 800 мм за одну поездку.</p>
+						</div>
+					</li>
+				</ul>
+			
+			</div>
+		</div>
+		
+		
+		
+		<script src="app.js"></script>
+	</body>
+</html>
