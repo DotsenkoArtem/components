@@ -117,3 +117,25 @@ h1 {
 }
 
 /* End of Accordion */
+
+@media (max-width: 575.98px) {
+  .page-content{
+    flex-direction: column-reverse;
+  }
+
+  .container{
+    margin-bottom: 5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .sidebar{
+    padding-top: 5rem;
+    width: 100%;
+    border-top: solid 1px #2a2a2a;
+    border-right: none;
+  }
+  .sidebar-list{
+    padding-left: 0;
+  }
+}
