@@ -1,0 +1,135 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Document
+    link(rel="stylesheet" href="css/navbar.css")
+  
+
+
+
+  //- INCLUDES & VARS
+  include _includes/_vars.pug
+  include _includes/_mixins.pug
+  - page = pages.index
+
+
+
+
+
+  body 
+    
+    |
+    |
+    // NAVBAR
+
+    .navbar 
+      // Navbar Top
+      .navbar-top 
+        .container.navbar-top__container
+          // LOGO
+          |
+          |
+        
+          .logo.navbar__logo
+            a(href="#") 
+              picture
+                //- source(srcset='img/logo.webp' type='image/webp')
+                |
+                |
+                img(src='img/default-logo.png' alt='Логотип')
+          |
+          // Contacts
+          .navbar__contacts 
+            .contact-link.contact-link_mail 
+              .contact-link__icon
+                i.svg-envelop-icon.svg-envelop-icon-dims 
+              a(href="mailto:mail@mail.ru") mail@mail.ru
+            .contact-link.contact-link_phone
+              .contact-link__icon
+                i.svg-phone-icon.svg-phone-icon-dims  
+              a(href="tel:+79999999999") +7 (999) 999–99–99
+
+          |
+          |
+          // Menu-trigger
+          .navbar-mobile-trigger.js-navbar-mobile-trigger
+            .navbar-mobile-trigger__item
+            .navbar-mobile-trigger__item
+            .navbar-mobile-trigger__item
+
+      |
+      |
+      // Navbar Bottom
+      .navbar-bottom
+        //- .container.navbar-bottom__container
+        nav.navbar-mobile.js-navbar-mobile
+          .navbar-mobile__inner
+            .navbar-mobile__header
+              .container
+                .navbar-mobile-logo.navbar__logo.js-menu-item
+                  picture
+                    //- source(media='(max-width: 414.98px)' srcset='img/415/logo-260x53.webp' type='image/webp')
+                    //- source(media='(max-width: 414.98px)' srcset='img/415/logo-260x53.png' type='image/png')
+                    //- source(srcset='img/logo.webp' type='image/webp')
+                    |
+                    |
+                    img(src='img/default-logo.png' alt='Лого')
+
+
+            //- .navbar-mobile-trigger-wrap
+
+
+            .navbar-mobile__body
+              .container.navbar-bottom__container
+                |
+                |
+                //Top Menu
+                +topMenu
+                //- +topMenuPages
+
+                button.btn.btn_primary.navbar-get-consult.js-modal-trigger(data-target="getConsult") Получить консультацию
+
+            |
+            |
+            // Navbar-mobile Footer
+            .navbar-mobile__footer 
+              .container
+                .navbar-mobile__contacts 
+                  .contact-link.contact-link_mail.js-menu-item
+                    .contact-link__icon
+                      i.svg-envelop-icon.svg-envelop-icon-dims 
+                    a(href="mailto:mail@mail.ru") mail@mail.ru
+                  .contact-link.contact-link_phone.js-menu-item
+                    .contact-link__icon
+                      i.svg-phone-icon.svg-phone-icon-dims  
+                    a(href="tel:+79999999999") +7 (999) 999–99–99
+
+                button.btn.btn_primary.navbar-mobile-get-consult.js-modal-trigger.js-menu-item(data-target="getConsult") Получить консультацию
+          
+        |
+        |
+        //- // Overlay
+        //- .navbar-mobile-overl.js-overl
+
+        //- button.btn.btn_primary.navbar-get-consult.js-modal-trigger(data-target="getConsult") Получить консультацию
+
+
+    |
+    |
+    |
+    br
+    br
+    br
+    br
+    br
+    br
+    br
+    br
+    |
+    |
+    h1 Navbar component
+
+    script(src="js/navbar.dev.js") 

@@ -1,0 +1,18 @@
+//- Меню без перехода по другим страницам
+mixin topMenu 
+  ul.top-menu
+    each menuItem, key in menu
+      li.top-menu__item.js-menu-item
+        a(href= `${menuItem.url}`)= menuItem.name
+
+
+//- Меню с переходом по другим страницам, автоматическим определением текущего (активного) пункта меню.
+mixin topMenuPages 
+  ul.top-menu
+    each menuItem, key in pages
+      //- Если ссылка на главную не нужна в меню
+      if key !== 'index'
+        //- Чтобы соответствующему пункту меню присвоить класс .current необходимо на каждой странице задать переменную page, значением которой будет объект со значением соответствующего свойства главного объекта {pages}
+        //- Вот так: let page = pages.index
+        li.top-menu__item.js-menu-item(class= (menuItem.name == page.name) ? 'menu__item_current': '')
+          a(href= `${menuItem.url}`)= menuItem.name

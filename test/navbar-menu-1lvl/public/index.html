@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/navbar.css">
+  </head>
+  <body>
+     
+    
+    <!-- NAVBAR-->
+    <div class="navbar"> 
+      <!-- Navbar Top-->
+      <div class="navbar-top"> 
+        <div class="container navbar-top__container">
+          <!-- LOGO-->
+          
+          <div class="logo navbar__logo"><a href="#"> 
+              <picture>
+                
+                <img src="img/default-logo.png" alt="Логотип">
+              </picture></a></div>
+          <!-- Contacts-->
+          <div class="navbar__contacts"> 
+            <div class="contact-link contact-link_mail"> 
+              <div class="contact-link__icon"><i class="svg-envelop-icon svg-envelop-icon-dims"> </i></div><a href="mailto:mail@mail.ru">mail@mail.ru</a>
+            </div>
+            <div class="contact-link contact-link_phone">
+              <div class="contact-link__icon"><i class="svg-phone-icon svg-phone-icon-dims"> </i></div><a href="tel:+79999999999">+7 (999) 999–99–99</a>
+            </div>
+          </div>
+          
+          <!-- Menu-trigger-->
+          <div class="navbar-mobile-trigger js-navbar-mobile-trigger">
+            <div class="navbar-mobile-trigger__item"></div>
+            <div class="navbar-mobile-trigger__item"></div>
+            <div class="navbar-mobile-trigger__item"></div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Navbar Bottom-->
+      <div class="navbar-bottom">
+        <nav class="navbar-mobile js-navbar-mobile">
+          <div class="navbar-mobile__inner">
+            <div class="navbar-mobile__header">
+              <div class="container">
+                <div class="navbar-mobile-logo navbar__logo js-menu-item">
+                  <picture>
+                    
+                    <img src="img/default-logo.png" alt="Лого">
+                  </picture>
+                </div>
+              </div>
+            </div>
+            <div class="navbar-mobile__body">
+              <div class="container navbar-bottom__container">
+                
+                
+                <!--Top Menu-->
+                  <ul class="top-menu">
+                    <li class="top-menu__item js-menu-item"><a href="#">пункт1</a></li>
+                    <li class="top-menu__item js-menu-item"><a href="#">пункт2</a></li>
+                    <li class="top-menu__item js-menu-item"><a href="#">пункт3</a></li>
+                    <li class="top-menu__item js-menu-item"><a href="#">пункт4</a></li>
+                    <li class="top-menu__item js-menu-item"><a href="#">пункт5</a></li>
+                  </ul>
+                <button class="btn btn_primary navbar-get-consult js-modal-trigger" data-target="getConsult">Получить консультацию</button>
+              </div>
+            </div>
+            
+            <!-- Navbar-mobile Footer-->
+            <div class="navbar-mobile__footer"> 
+              <div class="container">
+                <div class="navbar-mobile__contacts"> 
+                  <div class="contact-link contact-link_mail js-menu-item">
+                    <div class="contact-link__icon"><i class="svg-envelop-icon svg-envelop-icon-dims"> </i></div><a href="mailto:mail@mail.ru">mail@mail.ru</a>
+                  </div>
+                  <div class="contact-link contact-link_phone js-menu-item">
+                    <div class="contact-link__icon"><i class="svg-phone-icon svg-phone-icon-dims"> </i></div><a href="tel:+79999999999">+7 (999) 999–99–99</a>
+                  </div>
+                </div>
+                <button class="btn btn_primary navbar-mobile-get-consult js-modal-trigger js-menu-item" data-target="getConsult">Получить консультацию</button>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+      </div>
+    </div>
+    
+    <br><br><br><br><br><br><br><br>
+    
+    <h1>Navbar component</h1>
+    <script src="js/navbar.dev.js"> </script>
+  </body>
+</html>

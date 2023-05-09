@@ -1,0 +1,442 @@
+@import '_partials/_vars'
+
+*, *::before, *::after
+  margin: 0
+  padding: 0
+  border: 0
+  box-sizing: border-box
+
+// RESET
+ul
+  list-style: none
+
+html
+  font:
+    size: 10px
+    family: 'Open Sans', Helvetica, sans-serif
+
+body
+  font:
+    size: 1.6rem
+  color: #1f1f1f
+  background: rgb(250, 250, 250)
+
+#pageWrapper
+  overflow: hidden
+
+.container
+  &,
+  &_xxl,
+  &_xl,
+  &_lg,
+  &_md,
+  &_sm
+    margin: 0 auto
+    padding: 0 $gutter
+    width: 100%
+    max-width: calc( 1200px + #{$gutter * 2})
+
+h1
+  margin-bottom: 40px
+  text-align: center
+  // border-bottom: solid 1px rgba(0, 0, 0, 0.3)
+// -------------------------------------------------------------
+
+/* NAVBAR */
+.navbar
+  color: $navbar-color
+  background: $navbar-bg
+  &-top,
+  &-bottom
+    padding-top: 1rem
+    padding-bottom: 1rem
+    &__container
+      display: flex
+      justify-content: space-between
+      align-items: center
+  &-top
+    border-bottom: 1px solid $navbar-border-color
+  &-bottom
+    &__container
+      display: flex
+      justify-content: space-between
+      align-items: center
+  &-mobile
+    &-logo,
+    &__footer,
+    &-overl,
+    &__contacts,
+    &-get-consult,
+    &-trigger
+      display: none
+  &__logo
+    max-width: 29.5rem
+    overflow: hidden
+    img
+      display: block
+      max-width: 100%
+      max-height: 5rem
+  &__contacts
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+/* Top Menu */
+.top-menu
+  display: flex
+  justify-content: space-between
+  align-items: center
+  &__item
+    transition: opacity .3s
+    &:not(:last-child)
+      margin-right: 3rem
+    &:hover,
+    &:active
+      opacity: 0.8
+    a
+      font:
+        size: 1.8rem
+        weight: 500
+      color: $navbar-color
+      text-transform: uppercase
+      text-decoration: none
+
+.contact-link
+  display: flex
+  align-items: center
+  font-weight: 500
+  transition: opacity .3s
+  &:hover,
+  &:active
+    opacity: 0.8
+  &:not(:last-child)
+    margin-right: 3rem
+
+  &__icon
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 3.8rem
+    height: 3.8rem
+    border-radius: 50%
+    border: 1px solid $contact-link-color
+
+  a
+    margin-left: 1rem
+    color: $navbar-color
+    text-decoration: none
+  &_mail
+    a
+      font-size: 1.9rem
+  &_phone
+    a
+      font-size: 1.8rem
+
+/* VII. Media-queries
+ --------------------------------------- */
+
+/* XL */
+@media (max-width: 1399.98px)
+
+  .container
+    &,
+    &_xl,
+    &_lg,
+    &_md,
+    &_sm
+      max-width: 1140px
+    &_xxl
+      max-width: 100%
+
+  .d
+    &-block
+      &_xl
+        display: block
+    &-inline
+      &_xl
+        display: inline
+    &-none
+      &_xl
+        display: none
+
+/* LG */
+@media (max-width: 1199.98px)
+
+  .container
+    &,
+    &_lg,
+    &_md,
+    &_sm
+      max-width: 960px
+    &_xl
+      max-width: 100%
+
+  .d
+    &-block
+      &_lg
+        display: block
+    &-inline
+      &_lg
+        display: inline
+    &-none
+      &_lg
+        display: none
+
+/* MD */
+@media (max-width: 991.98px)
+  .scroll-hidden
+    padding-right: 0
+
+  /* NAVBAR */
+  .navbar
+    &-top
+      border-bottom-color: #fff
+    &-bottom
+      padding-top: 0
+      padding-bottom: 0
+    &__logo
+      width: 88%
+      max-width: 26rem
+    &__contacts
+      display: none
+    &-get-consult
+      display: none
+
+    &-mobile
+      position: fixed
+      top: 0
+      right: 0
+      bottom: 0
+      // padding: 1.3rem 0
+      transform: translateX(100%)
+      z-index: 999
+      width: 100%
+      background: rgb(250, 250, 250)
+      transition: all 0.3s
+      &-trigger
+        display: inline-block
+        z-index: 9999
+      &__inner
+        position: relative
+        display: flex
+        flex-direction: column
+        align-items: stretch
+        justify-content: center
+        margin-left: auto
+        margin-right: auto
+        // padding-left: $gutter
+        // padding-right: $gutter
+        width: 100%
+        // max-width: 720px
+      &__header
+        margin-bottom: 2rem
+        // padding: $gutter
+        padding-top: $gutter
+        padding-bottom: $gutter
+        box-shadow: 0 0 5px 0px rgba(0, 0, 0, 0.2)
+        background: rgba(255, 255, 255, 1)
+      &__body
+        // padding-left: $gutter
+        // padding-right: $gutter
+
+      &-logo
+        display: block
+      &__footer
+        // padding-left: $gutter
+        // padding-right: $gutter
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+      &__contacts
+        display: block
+        margin-bottom: 5rem
+        .contact-link
+          &:not(:last-child)
+            margin-bottom: 1.5rem
+      &-get-consult
+        display: inline-block
+      .js-menu-item
+        transform: translateX(5px)
+        opacity: 0
+
+      &.open
+        transform: translateX(0)
+        .js-menu-item
+
+          transition: 500ms
+          transform: translateX(0)
+          opacity: 1
+
+      &-trigger
+        display: block
+        position: relative
+        width: 30px
+        height: 24px
+        &__item
+          position: absolute
+          left: 0
+          width: 30px
+          height: 4px
+          background: $navbar-trigger-bg
+          border-radius: 4px
+          transition: 500ms
+          &:first-child
+            top: 0
+          &:nth-child(2)
+            top: 10px
+          &:last-child
+            top: 20px
+
+        &.open
+          .navbar-mobile-trigger__item
+            &:first-child
+              transform-origin: 0px 3px
+              transform: rotate(45deg)
+            &:nth-child(2)
+              opacity: 0
+            &:last-child
+              transform-origin: 2px 2px
+              transform: rotate(-45deg)
+
+      &__footer
+        display: block
+
+  /* Top Menu */
+  .top-menu
+    display: block
+    margin-bottom: 1.8rem
+    // padding-left: $gutter
+    // padding-right: $gutter
+    width: 100%
+    &__item
+      padding-top: 1.2rem
+      padding-bottom: 1.2rem
+      font-size: 19px
+      // transform: translateX(5px)
+      // opacity: 0
+
+      // a
+      //   color: v.$text-light
+
+  // .navbar-mobile-overl
+  //   position: fixed
+  //   top: 0
+  //   right: 0
+  //   bottom: 0
+  //   height: 0
+  //   z-index: -1
+  //   width: 100%
+  //   height: 100%
+  //   background: rgba(0, 0, 0, 0)
+  //   visibility: hidden
+  //   transition: 0.3s
+
+  //   &.open
+  //     z-index: 980
+  //     width: 100%
+  //     visibility: visible
+  //     background: rgba(0, 0, 0, 0.5)
+
+  .container
+    &,
+    &_md,
+    &_sm
+      max-width: 720px
+    &_lg
+      max-width: 100%
+
+  .d
+    &-block
+      &_md
+        display: block
+    &-inline
+      &_md
+        display: inline
+    &-none
+      &_md
+        display: none
+
+/* SM */
+@media (max-width: 767.98px)
+  .container
+    &,
+    &_sm
+      max-width: 540px
+    &_md
+      max-width: 100%
+
+  /* NAVBAR */
+  .navbar
+    &-mobile
+      // &__inner
+      //   max-width: 540px
+    &-top
+      padding-top: 1.4rem
+      padding-bottom: 1.4rem
+    &-bottom
+      padding-top: 0
+      padding-bottom: 0
+
+  .d
+    &-block
+      &_sm
+        display: block
+    &-inline
+      &_sm
+        display: inline
+    &-none
+      &_sm
+        display: none
+
+/* XS */
+@media (max-width: 575.98px)
+  .container
+    // padding-left: 2rem
+    // padding-right: 2rem
+    max-width: 410px
+    &_sm
+      max-width: 100%
+
+  /* NAVBAR */
+  // .navbar
+  //   &-mobile
+  //     &__inner
+  //       max-width: 410px
+
+  .d
+    &-block
+      &_xs
+        display: block
+    &-inline
+      &_xs
+        display: inline
+    &-none
+      &_xs
+        display: none
+
+@media (max-width: 479.98px)
+
+/* XXS */
+@media (max-width: 413.98px)
+  .container
+    max-width: 100%
+
+  /* NAVBAR */
+  .navbar
+    &-mobile
+      &__inner
+        padding: 0
+        // max-width: none
+
+  .d
+    &-block
+      &_xxs
+        display: block2
+    &-inline
+      &_xxs
+        display: inline
+    &-none
+      &_xxs
+        display: none
+
+@media (max-width: 359.99px)
