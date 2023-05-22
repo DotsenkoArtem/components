@@ -13,7 +13,7 @@ html(lang="en")
   //- INCLUDES & VARS
   include _includes/_vars.pug
   include _includes/_mixins.pug
-  - page = pages.index
+  - let page = pages.index
 
 
 
@@ -81,34 +81,34 @@ html(lang="en")
 
             //- .navbar-mobile-trigger-wrap
 
+            .navbar-mobile-scrollable
+              .navbar-mobile__body
+                .container.navbar-bottom__container
+                  |
+                  |
+                  //Top Menu
+                  +topMenu
+                  //- +topMenuPages
 
-            .navbar-mobile__body
-              .container.navbar-bottom__container
-                |
-                |
-                //Top Menu
-                +topMenu
-                //- +topMenuPages
+                  button.btn.btn_primary.navbar-get-consult.js-modal-trigger(data-target="getConsult") Получить консультацию
 
-                button.btn.btn_primary.navbar-get-consult.js-modal-trigger(data-target="getConsult") Получить консультацию
+              |
+              |
+              // Navbar-mobile Footer
+              .navbar-mobile__footer 
+                .container
+                  .navbar-mobile__contacts 
+                    .contact-link.contact-link_mail.js-menu-item
+                      .contact-link__icon
+                        i.svg-envelop-icon.svg-envelop-icon-dims 
+                      a(href="mailto:mail@mail.ru") mail@mail.ru
+                    .contact-link.contact-link_phone.js-menu-item
+                      .contact-link__icon
+                        i.svg-phone-icon.svg-phone-icon-dims  
+                      a(href="tel:+79999999999") +7 (999) 999–99–99
 
-            |
-            |
-            // Navbar-mobile Footer
-            .navbar-mobile__footer 
-              .container
-                .navbar-mobile__contacts 
-                  .contact-link.contact-link_mail.js-menu-item
-                    .contact-link__icon
-                      i.svg-envelop-icon.svg-envelop-icon-dims 
-                    a(href="mailto:mail@mail.ru") mail@mail.ru
-                  .contact-link.contact-link_phone.js-menu-item
-                    .contact-link__icon
-                      i.svg-phone-icon.svg-phone-icon-dims  
-                    a(href="tel:+79999999999") +7 (999) 999–99–99
-
-                button.btn.btn_primary.navbar-mobile-get-consult.js-modal-trigger.js-menu-item(data-target="getConsult") Получить консультацию
-          
+                  button.btn.btn_primary.navbar-mobile-get-consult.js-modal-trigger.js-menu-item(data-target="getConsult") Получить консультацию
+            
         |
         |
         //- // Overlay

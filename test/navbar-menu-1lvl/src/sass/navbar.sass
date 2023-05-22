@@ -228,6 +228,7 @@ h1
         // padding-right: $gutter
         width: 100%
         // max-width: 720px
+        max-height: 100%
       &__header
         margin-bottom: 2rem
         // padding: $gutter
@@ -235,6 +236,10 @@ h1
         padding-bottom: $gutter
         box-shadow: 0 0 5px 0px rgba(0, 0, 0, 0.2)
         background: rgba(255, 255, 255, 1)
+      &-scrollable
+        // overflow: auto
+        overflow-x: hidden
+        overflow-y: auto
       &__body
         // padding-left: $gutter
         // padding-right: $gutter
@@ -242,8 +247,8 @@ h1
       &-logo
         display: block
       &__footer
-        // padding-left: $gutter
-        // padding-right: $gutter
+        padding-top: $gutter
+        padding-bottom: $gutter
         display: flex
         flex-direction: column
         align-items: flex-start

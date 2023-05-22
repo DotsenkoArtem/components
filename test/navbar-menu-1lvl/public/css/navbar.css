@@ -220,6 +220,7 @@ h1 {
     margin-left: auto;
     margin-right: auto;
     width: 100%;
+    max-height: 100%;
   }
   .navbar-mobile__header {
     margin-bottom: 2rem;
@@ -228,10 +229,16 @@ h1 {
     box-shadow: 0 0 5px 0px rgba(0, 0, 0, 0.2);
     background: white;
   }
+  .navbar-mobile-scrollable {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
   .navbar-mobile-logo {
     display: block;
   }
   .navbar-mobile__footer {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
