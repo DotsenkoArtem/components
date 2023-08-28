@@ -26,6 +26,12 @@ body {
   max-width: 960px;
 }
 
+.btns-panel {
+  margin-top: 4rem;
+  display: flex;
+  justify-content: space-around;
+}
+
 h1 {
   margin-top: 4rem;
   text-align: center;
@@ -38,14 +44,24 @@ h1 {
   padding: 0.5em 1.25em;
   border-radius: 0.5em;
   display: block;
-  background: #0072f5;
   font-size: 2rem;
   color: #fff;
   cursor: pointer;
 }
 .btn:hover {
-  background: #439aff;
   transition: background 0.3s;
+}
+.btn_blue {
+  background: #0072f5;
+}
+.btn_blue:hover {
+  background: #439aff;
+}
+.btn_red {
+  background: #e93737;
+}
+.btn_red:hover {
+  background: #f17c7c;
 }
 
 .modal {
@@ -72,19 +88,19 @@ h1 {
 .modal__inner {
   display: flex;
   flex-direction: column;
+  position: relative;
+  z-index: 100;
   margin: 1.5rem;
   padding: 1.5rem;
   min-width: 290px;
   max-width: 60rem;
-  min-height: 40rem;
+  min-height: 400px;
   max-height: 80vmin;
   border-radius: 1rem;
   box-shadow: 0 5px 20px 2px rgba(0, 0, 0, 0.35);
   background: #fff;
-  position: relative;
   transform: translateY(25px);
   transition: inherit;
-  z-index: 100;
 }
 .modal__content {
   display: flex;
@@ -93,6 +109,7 @@ h1 {
   overflow: hidden;
 }
 .modal__header {
+  padding-right: 3.5rem;
   padding-bottom: 0.75rem;
   border-bottom: solid 1px #777;
 }
@@ -117,7 +134,7 @@ h1 {
 .modal__close {
   position: absolute;
   top: 1.5rem;
-  right: 4rem;
+  right: 1.5rem;
   cursor: pointer;
   width: 3rem;
   height: 3rem;
