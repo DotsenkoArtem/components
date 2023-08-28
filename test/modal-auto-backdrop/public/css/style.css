@@ -30,6 +30,7 @@ body {
   margin-top: 4rem;
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 h1 {
@@ -44,7 +45,9 @@ h1 {
   padding: 0.5em 1.25em;
   border-radius: 0.5em;
   display: block;
+  font-family: inherit;
   font-size: 2rem;
+  font-weight: 300;
   color: #fff;
   cursor: pointer;
 }
