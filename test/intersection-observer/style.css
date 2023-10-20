@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+}
+
+html{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 10px;
+}
+body{
+  font-size: 1.8rem;
+  font-weight: 300;
+  color: #242424;
+  background: #f3f3f3;
+}
+
+.section{
+  padding: 4rem 0;
+  opacity: .35;
+  transition: opacity 500ms;
+}
+
+.container{
+  margin: 0 auto;
+  max-width: 96rem;
+}
+.section__heading{
+  text-align: center;
+  opacity: 0;
+  transition: opacity 500ms 200ms
+}
+.section__content{
+  text-align: left;
+}
+.section__content p{
+  margin-bottom: 1.5em;
+  text-indent: 2.5em;
+  opacity: 0;
+  transition: opacity 500ms 400ms
+}
+
+.section.fadeIn,
+.section.fadeIn .section__heading,
+.section.fadeIn .section__content p
+{
+  opacity: 1;
+}
