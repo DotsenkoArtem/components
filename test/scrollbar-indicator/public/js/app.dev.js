@@ -11,4 +11,5 @@ function setScrollBarIndicator() {
 }
 
 setScrollBarIndicator();
-window.addEventListener('scroll', setScrollBarIndicator); // ДОДБАВИТЬ ИЗМЕНЕНИЕ ПРИ РЕСАЙЗЕ
+window.addEventListener('scroll', setScrollBarIndicator);
+window.addEventListener('resize', setScrollBarIndicator);
