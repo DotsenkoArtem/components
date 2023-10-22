@@ -1,16 +1,34 @@
-"use strict"
+"use strict";
 
-const scrollBarIndicator = document.querySelector('.scroll-bar-indicator')
-const scrollBarIndicatorStrip = scrollBarIndicator.querySelector('.scroll-bar-indicator__strip')
-const documentHeight = document.documentElement.offsetHeight
-const windowHeight = document.documentElement.clientHeight
+pageScrollIndicatorInit();
 
-function setScrollBarIndicator() {
-  let scrollProgress = window.scrollY
-  scrollBarIndicatorStrip.style.width = `${Math.floor(scrollProgress/(documentHeight - windowHeight) * 10000) / 100}%`
+function pageScrollIndicatorInit() {
+  const pageScrollIndicator = document.querySelector(".page-scroll-indicator");
+  const pageScrollIndicatorStrip = pageScrollIndicator.querySelector(
+    ".page-scroll-indicator__strip"
+  );
+  let documentHeight;
+  let windowHeight;
+
+  // Получить параметры окна и документа
+  function getWindowParams() {
+    documentHeight = document.documentElement.offsetHeight;
+    windowHeight = document.documentElement.clientHeight;
+  }
+  // Вычисление величины прокрутки (в %) и усановка ширины индикатора
+  function setPageScrollIndicator() {
+    let scrollProgress = window.scrollY;
+    getWindowParams();
+    pageScrollIndicatorStrip.style.width = `${
+      Math.floor((scrollProgress / (documentHeight - windowHeight)) * 10000) /
+      100
+    }%`;
+
+    pageScrollIndicatorValue.innerHTML = `${pageScrollIndicatorStrip.style.width}`;
+  }
+
+  setPageScrollIndicator();
+  // Выполнение функции при скролле и изменении размеров окна браузера
+  window.addEventListener("scroll", setPageScrollIndicator);
+  window.addEventListener("resize", setPageScrollIndicator);
 }
-
-setScrollBarIndicator()
-
-window.addEventListener('scroll', setScrollBarIndicator)
-window.addEventListener('resize', setScrollBarIndicator)
