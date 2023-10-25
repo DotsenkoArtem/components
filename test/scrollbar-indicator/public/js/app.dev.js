@@ -15,9 +15,8 @@ function pageScrollIndicatorInit() {
 
 
   function setPageScrollIndicator() {
-    var scrollProgress = window.scrollY;
     getWindowParams();
-    pageScrollIndicatorStrip.style.width = "".concat(Math.floor(scrollProgress / (documentHeight - windowHeight) * 10000) / 100, "%");
+    pageScrollIndicatorStrip.style.width = "".concat(Math.floor(window.scrollY / (documentHeight - windowHeight) * 10000) / 100, "%");
     pageScrollIndicatorValue.innerHTML = "".concat(pageScrollIndicatorStrip.style.width);
   }
 

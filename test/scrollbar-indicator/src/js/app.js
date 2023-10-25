@@ -17,10 +17,9 @@ function pageScrollIndicatorInit() {
   }
   // Вычисление величины прокрутки (в %) и усановка ширины индикатора
   function setPageScrollIndicator() {
-    let scrollProgress = window.scrollY;
     getWindowParams();
     pageScrollIndicatorStrip.style.width = `${
-      Math.floor((scrollProgress / (documentHeight - windowHeight)) * 10000) /
+      Math.floor((window.scrollY / (documentHeight - windowHeight)) * 10000) /
       100
     }%`;
 
